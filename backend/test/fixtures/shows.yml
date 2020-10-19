@@ -1,0 +1,27 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  type: one
+  image: MyString
+  title: MyString
+  year: 1
+  maturity: MyString
+  runtime: 1
+  genre: one
+  description: MyString
+  casts: MyString
+  creators: MyString
+  history: false
+
+two:
+  type: two
+  image: MyString
+  title: MyString
+  year: 1
+  maturity: MyString
+  runtime: 1
+  genre: two
+  description: MyString
+  casts: MyString
+  creators: MyString
+  history: false

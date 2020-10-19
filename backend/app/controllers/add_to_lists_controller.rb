@@ -1,0 +1,2 @@
+class AddToListsController < ApplicationController
+end
