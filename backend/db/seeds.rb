@@ -1,24 +1,25 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+
 Review.delete_all
-Review.reset_pk_sequence
 AddToList.delete_all
-AddToList.reset_pk_sequence
 List.delete_all
-List.reset_pk_sequence
 User.delete_all
-User.reset_pk_sequence
 Show.delete_all
-Show.reset_pk_sequence
 Genre.delete_all
-Genre.reset_pk_sequence
 Type.delete_all
+
+Review.reset_pk_sequence
+AddToList.reset_pk_sequence
+List.reset_pk_sequence
+User.reset_pk_sequence
+Show.reset_pk_sequence
+Genre.reset_pk_sequence
 Type.reset_pk_sequence
+
+#Trending: https://api.themoviedb.org/3/trending/all/day?api_key=c181df741a62e7ef37c802cdeb5ff09b
+#Popular TV Shows: https://api.themoviedb.org/3/tv/popular?api_key=c181df741a62e7ef37c802cdeb5ff09b&language=en-US&page=1
+#Movie Genres: https://api.themoviedb.org/3/genre/movie/list?api_key=c181df741a62e7ef37c802cdeb5ff09b&language=en-US
+#TV Genres: https://api.themoviedb.org/3/genre/tv/list?api_key=c181df741a62e7ef37c802cdeb5ff09b&language=en-US
+# Popular Movies: https://api.themoviedb.org/3/discover/movie?api_key=c181df741a62e7ef37c802cdeb5ff09b&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1
 
 
 #######TYPE
@@ -68,3 +69,4 @@ review2 = Review.create!(user_id: 1, show_id: 5, content: "A must watch! Heartwa
 review3 = Review.create!(user_id: 1, show_id: 6, content: "I love Tom Hanks! All time favorite rom-com!", stars: 5)
 review4 = Review.create!(user_id: 1, show_id: 1, content: "Made me cry, laugh throughout the entire movie", stars: 5)
 review5 = Review.create!(user_id: 1, show_id: 7, content: "Meh, it was okay", stars: 3)
+
