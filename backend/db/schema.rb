@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_18_231838) do
+ActiveRecord::Schema.define(version: 2020_10_20_220901) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -38,32 +38,28 @@ ActiveRecord::Schema.define(version: 2020_10_18_231838) do
     t.index ["user_id"], name: "index_lists_on_user_id"
   end
 
-  create_table "reviews", force: :cascade do |t|
-    t.bigint "user_id", null: false
+  create_table "show_genres", force: :cascade do |t|
+    t.bigint "genre_id", null: false
     t.bigint "show_id", null: false
-    t.string "content"
-    t.integer "stars"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["show_id"], name: "index_reviews_on_show_id"
-    t.index ["user_id"], name: "index_reviews_on_user_id"
+    t.index ["genre_id"], name: "index_show_genres_on_genre_id"
+    t.index ["show_id"], name: "index_show_genres_on_show_id"
   end
 
   create_table "shows", force: :cascade do |t|
     t.bigint "type_id", null: false
-    t.string "image"
+    t.string "poster"
+    t.string "backdrop"
     t.string "title"
-    t.integer "year"
-    t.string "maturity"
-    t.integer "runtime"
-    t.bigint "genre_id", null: false
-    t.string "description"
-    t.string "casts"
-    t.string "creators"
+    t.string "language"
+    t.float "average_rating"
+    t.string "overview"
+    t.string "release_date"
+    t.integer "popularity"
     t.boolean "history", default: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["genre_id"], name: "index_shows_on_genre_id"
     t.index ["type_id"], name: "index_shows_on_type_id"
   end
 
@@ -74,7 +70,8 @@ ActiveRecord::Schema.define(version: 2020_10_18_231838) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "name"
+    t.string "first_name"
+    t.string "last_name"
     t.string "email"
     t.string "password_digest"
     t.datetime "created_at", precision: 6, null: false
@@ -84,8 +81,7 @@ ActiveRecord::Schema.define(version: 2020_10_18_231838) do
   add_foreign_key "add_to_lists", "lists"
   add_foreign_key "add_to_lists", "shows"
   add_foreign_key "lists", "users"
-  add_foreign_key "reviews", "shows"
-  add_foreign_key "reviews", "users"
-  add_foreign_key "shows", "genres"
+  add_foreign_key "show_genres", "genres"
+  add_foreign_key "show_genres", "shows"
   add_foreign_key "shows", "types"
 end

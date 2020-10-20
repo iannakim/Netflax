@@ -2,15 +2,14 @@ class CreateShows < ActiveRecord::Migration[6.0]
   def change
     create_table :shows do |t|
       t.belongs_to :type, null: false, foreign_key: true
-      t.string :image
+      t.string :poster
+      t.string :backdrop
       t.string :title
-      t.integer :year
-      t.string :maturity
-      t.integer :runtime
-      t.belongs_to :genre, null: false, foreign_key: true
-      t.string :description
-      t.string :casts
-      t.string :creators
+      t.string :language
+      t.float :average_rating
+      t.string :overview
+      t.string :release_date
+      t.integer :popularity
       t.boolean :history, :default => false
 
       t.timestamps

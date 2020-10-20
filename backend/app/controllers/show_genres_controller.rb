@@ -1,0 +1,2 @@
+class ShowGenresController < ApplicationController
+end

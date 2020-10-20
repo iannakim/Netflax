@@ -1,6 +1,5 @@
 class ShowSerializer < ActiveModel::Serializer
-  attributes :id, :image, :title, :year, :maturity, :runtime, :description, :casts, :creators, :history
-  belongs_to :genre
+  attributes :id, :type_id, :poster, :backdrop, :title, :language, :average_rating, :overview, :release_date, :popularity, :history
   belongs_to :type
-  has_many :reviews
+  has_many :show_genres
 end

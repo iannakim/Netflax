@@ -1,5 +1,8 @@
 import React from 'react';
 import './App.css';
+import Logo from './components/Logo.js'
+import EntryContainer from './components/EntryContainer.js'
+import Home from './components/Home.js'
 
 
 class App extends React.Component {
@@ -7,7 +10,9 @@ class App extends React.Component {
   render() {
     return (
         <div className="App">
-          <h1>Hello!</h1>
+          <Logo />
+          <EntryContainer />
+          <Home />
         </div>
     )
   }
