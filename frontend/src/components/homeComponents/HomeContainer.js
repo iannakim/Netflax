@@ -6,7 +6,7 @@ import ListContainer from './ListContainer.js'
 function HomeContainer(){
   return(
     <div className="HomeContainer">
-    {/* <Nav /> */}
+    <Nav />
     <Home />
     {/* <ListContainer /> */}
   </div>

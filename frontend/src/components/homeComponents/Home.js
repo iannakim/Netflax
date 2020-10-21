@@ -10,8 +10,8 @@ class Home extends React.Component{
       <div className="Home">
         <Banner fetchUrl={requests.fetchMovies}/>
 
-        
-        <StripContainer title="Action & Adventure" fetchUrl={requests.fetchActionAdventure}
+
+        <StripContainer title="TRENDING NOW" fetchUrl={requests.fetchActionAdventure}
         isLargeRow
         />
         <StripContainer title="Adventure Movies" fetchUrl={requests.fetchAdventure}/>

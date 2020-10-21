@@ -6,8 +6,8 @@ function EntryContainer(){
 
   return(
     <div>
-      <SignUp />
-      <SignIn />
+      {/* <SignUp />
+      <SignIn /> */}
     </div>
   )
 }

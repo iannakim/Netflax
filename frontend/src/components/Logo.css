@@ -1,0 +1,12 @@
+.logo {
+  position: absolute;
+  top: 7px;
+  left: 10px;
+  display: flex;
+  z-index: 1000;
+}
+
+.logo_img {
+  width: 100px;
+  object-fit: contain;
+}
