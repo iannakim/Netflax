@@ -1,3 +1,7 @@
+.strip {
+  margin-left: 20px;
+}
+
 .strip_posters {
   display: flex;
   overflow-y: hidden;
@@ -19,4 +23,12 @@
 
 .strip_poster:hover {
   transform: scale(1.08);
+}
+
+.strip_posterLarge {
+  max-height: 250px;
+}
+
+.strip_posterLarge:hover {
+  transform: scale(1.09);
 }

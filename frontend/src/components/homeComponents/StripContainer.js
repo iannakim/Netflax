@@ -35,8 +35,8 @@ state = {
             {this.state.shows.map((movie) => (
               <img 
               key={movie.id}
-              className="strip_poster" 
-              src={movie.show.poster} alt={movie.show.title} />
+              className={`strip_poster ${this.props.isLargeRow && "strip_posterLarge"}`} 
+              src={this.props.isLargeRow ? movie.show.poster : movie.show.backdrop} alt={movie.show.title} />
             ))}
           </div>
 
