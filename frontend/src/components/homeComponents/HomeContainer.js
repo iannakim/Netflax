@@ -1,15 +1,14 @@
 import React from 'react'
 import Home from './Home.js'
-import Nav from '../Nav.js'
-import ListContainer from '../ListContainer.js'
-import requests from './src/requests.js'
+import Nav from './Nav.js'
+import ListContainer from './ListContainer.js'
 
 function HomeContainer(){
   return(
     <div className="HomeContainer">
-    <Nav />
-    <Home fetchUrl={requests.fetchTrendingShows} />
-    <ListContainer />
+    {/* <Nav /> */}
+    <Home />
+    {/* <ListContainer /> */}
   </div>
   )
 }
