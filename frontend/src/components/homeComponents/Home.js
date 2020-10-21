@@ -8,7 +8,9 @@ class Home extends React.Component{
   render(){
     return(
       <div className="Home">
-        <Banner fetchUrl={requests.fetchTrendingShows}/>
+        <Banner fetchUrl={requests.fetchMovies}/>
+
+        
         <StripContainer title="Action & Adventure" fetchUrl={requests.fetchActionAdventure}
         isLargeRow
         />

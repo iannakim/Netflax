@@ -5,7 +5,7 @@ import './StripContainer.css'
 class StripContainer extends React.Component {
 
 state = {
-  shows: [],
+  shows: []
 }
   componentDidMount(){
     fetch(this.props.fetchUrl)
@@ -21,11 +21,6 @@ state = {
 
 
   render(){
-    console.table(this.state.shows)
-
-    // let stripsOfPosters = this.state.shows.map((movie) => {
-    //   return <img src={movie.poster} alt={movie.title} />
-    // })
 
     return(
       <div className="strip">
