@@ -1,0 +1,22 @@
+.strip_posters {
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  padding: 20px;
+}
+
+.strip_posters::-webkit-scrollbar {
+  display: none;
+}
+
+.strip_poster {
+  object-fit: contain;
+  width: 100%;
+  max-height: 100px;
+  margin-right: 10px;
+  transition: transform 450ms;
+}
+
+.strip_poster:hover {
+  transform: scale(1.08);
+}
