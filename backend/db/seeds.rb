@@ -51,7 +51,7 @@ end
 
 
 # Trending Shows
-(1..5).to_a.each do |page|
+(1..10).to_a.each do |page|
   url3 = "https://api.themoviedb.org/3/trending/all/day?page=" + page.to_s + "&api_key=c181df741a62e7ef37c802cdeb5ff09b"
   restClientResponseObject3 = RestClient.get(url3)
   jsonButItsAString3 = restClientResponseObject3.body
@@ -96,8 +96,8 @@ end
 
 
 
-# # User
-# anna = User.create!(name: "Anna Kim", email: "anna@gmail.com", password_digest:"abc123")
+# User
+anna = User.create!(first_name: "Anna", last_name: "Kim", email: "anna@gmail.com", password:"abc123")
 
 
 # # List

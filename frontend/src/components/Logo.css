@@ -1,12 +1,12 @@
 .logo {
   position: absolute;
-  top: 7px;
+  top: 15px;
   left: 10px;
   display: flex;
   z-index: 1000;
 }
 
 .logo_img {
-  width: 100px;
+  width: 120px;
   object-fit: contain;
 }
