@@ -5,5 +5,9 @@ class TypesController < ApplicationController
     render json: @types
   end
 
+  def show
+    @type= Type.find(params[:id])
+    render json: @type
+  end
 
 end

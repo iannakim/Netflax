@@ -1,8 +1,8 @@
 import React from 'react';
 import './App.css';
 import Logo from './components/Logo.js'
-import EntryContainer from './components/EntryContainer.js'
-import Home from './components/Home.js'
+import EntryContainer from './components/entryComponents/EntryContainer.js'
+import HomeContainer from './components/homeComponents/HomeContainer.js'
 
 
 class App extends React.Component {
@@ -12,7 +12,7 @@ class App extends React.Component {
         <div className="App">
           <Logo />
           <EntryContainer />
-          <Home />
+          <HomeContainer />
         </div>
     )
   }
