@@ -1,10 +1,24 @@
 .form_background {
   background-size: cover;
   background-image: url("https://backgroundcheckall.com/wp-content/uploads/2017/12/netflix-background-9.jpg");
+  display: block;
+  height: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  z-index: -1;
 }
 
 .form_page {
   background-color:rgba(0,0,0,0.6);
+  display: block;
+  height: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  z-index: -1;
 }
 
 .sign_in {
@@ -12,7 +26,7 @@
   top: 15px;
   right: 10px;
   /* display: flex; */
-  /* z-index: 1000; */
+  z-index: 1000;
 }
 
 .sign_in_button {
