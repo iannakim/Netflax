@@ -16,13 +16,20 @@
 
 .my_list {
   padding: 8px;
-  width: 80px;
+  width: 100px;
   object-fit: contain;
   float: right;
 }
 
 .nav_avatar {
   height: 40px;
+  object-fit: contain;
+  float: right;
+}
+
+.current_user {
+  padding: 8px;
+  width: 170px;
   object-fit: contain;
   float: right;
 }

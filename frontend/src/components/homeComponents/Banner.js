@@ -42,7 +42,7 @@ class Banner extends React.Component {
               </div>
 
               <h1 className="banner_overview">
-                {this.truncate(this.state.shows.overview, 150)}
+                {this.truncate(this.state.shows.overview, 160)}
               </h1>
 
           </div>

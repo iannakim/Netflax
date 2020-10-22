@@ -61,7 +61,7 @@ end
     if show["backdrop_path"]
       bkdrop = "https://image.tmdb.org/t/p/w1280" + show["backdrop_path"]
     else 
-      bkdrop = ""
+      bkdrop = "https://www.haeger.com/images/coming-soon.jpg"
     end
     if show["media_type"] == "tv"
       medtype = 2
