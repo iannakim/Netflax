@@ -12,7 +12,8 @@ class App extends React.Component {
 
   state = {
     currentUser: null,
-    isUserLoggedIn: false
+    isUserLoggedIn: false,
+    list: {"id": null}
   }
 
   addUserToState = (infoFromChild) => {
@@ -27,6 +28,7 @@ class App extends React.Component {
       return <div>
                 <SignUp
                   addUserToState={this.addUserToState}
+                  createList={this.createList}
                 />
              </div> 
     }
@@ -37,7 +39,8 @@ class App extends React.Component {
       return <div>
                 <SignIn
                   addUserToState={this.addUserToState}
-                  handleLogIn={this.handleLogIn} 
+                  handleLogIn={this.handleLogIn}
+                  findList={this.findList}
                 />
              </div> 
     }
@@ -46,18 +49,97 @@ class App extends React.Component {
   renderHome = (routerProps) => {
     if(this.state.isUserLoggedIn){
       return <div>
-                <HomeContainer currentUser={this.state.currentUser}/>
+                <HomeContainer 
+                  currentUser={this.state.currentUser}
+                  createAddToList={this.createAddToList}
+                  list={this.state.list}
+                />
              </div> 
     }
   }
 
-  renderLists = () => {
 
+  createList = (user) => {
+    fetch("http://localhost:3000/list", {
+      method: "POST",
+      headers: {
+          "Content-Type": "Application/json"
+      },
+      body: JSON.stringify({
+          name: "My List",
+          user_id: user.id
+      })
+  })
+      .then(res => res.json())
+      .then((newList)=> {
+        console.log(newList)
+        this.addListToState(newList)
+      })
+  }
+
+  addListToState = (newlist) => {
+    this.setState({
+      list: newlist
+    })
+  }
+
+  findList = (user) => {
+    fetch("http://localhost:3000/findlist", {
+      method: "POST",
+      headers: {"content-type": "application/json"},
+      body: JSON.stringify({
+          user_id: user.id
+      })
+  })
+     .then(res => res.json())
+     .then((foundList) => {
+         if(foundList.id){
+          this.addListToState(foundList)
+          console.log("foundlist", foundList)
+         } 
+      })
+  }
+
+
+  renderLists = (routerProps) => {
+    if(this.state.isUserLoggedIn){
+      return <div>
+                <ListContainer
+                    list={this.state.list} 
+                    // deleteFromList={this.deleteFromList}
+                />
+             </div> 
+    }
+  }
+
+  deleteFromList = (listItemIdFromChild) => {
+    fetch("http://localhost:3000/deleteItem", {
+      method: "DELETE",
+      headers: {"content-type": "application/json"},
+      body: JSON.stringify({
+          id: listItemIdFromChild
+      })
+    })
+  }
+
+  createAddToList = (show, list) => {
+    console.log("createAddToList", show, list)
+    fetch("http://localhost:3000/addtolist", {
+      method: "POST",
+      headers: {"content-type": "application/json"},
+      body: JSON.stringify({
+          list_id: list,
+          show_id: show
+      })
+  })
+     .then(res => res.json())
+     .then((newlyAddedListItem) => {
+          console.log(newlyAddedListItem)
+      })
   }
 
 
   render() {
-    console.log(this.props.history)
     return (
         <div className="App">
           <Logo />

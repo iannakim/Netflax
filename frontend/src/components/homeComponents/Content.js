@@ -2,7 +2,6 @@ import React from "react";
 import './Content.css'
 
 function Content(props) {
-  console.log("content props", props);
   return(
     <div className="modal">
       <a className="close" onClick={props.close}>
@@ -11,7 +10,7 @@ function Content(props) {
 
         <div className="modal_content">
           <div className="poster">
-              <img class="poster" src={props.movie.show.poster} />
+              <img className="poster" src={props.movie.show.poster} />
           </div>
 
           <div className="content">
@@ -26,7 +25,7 @@ function Content(props) {
               
               <div className="button">
                 <button className="modal_button">Play</button>
-                <button className="modal_button">Add to List</button>
+                <button className="modal_button" onClick={() => {props.createAddToList(props.movie.show.id, props.list.id)}}>Add to List</button>
               </div>
 
               <div className="overview">

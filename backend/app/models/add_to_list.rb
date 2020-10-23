@@ -4,3 +4,5 @@ class AddToList < ApplicationRecord
   validates :list, presence: true
   validates :show, presence: true
 end
+
+

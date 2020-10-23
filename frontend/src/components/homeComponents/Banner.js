@@ -1,5 +1,6 @@
 import React from 'react'
 import './Banner.css'
+import { withRouter } from 'react-router-dom';
 
 class Banner extends React.Component {
 
@@ -24,6 +25,7 @@ class Banner extends React.Component {
 
 
   render(){
+    console.log(this.props)
     return (
       <header className="banner"
         style={{
@@ -37,7 +39,7 @@ class Banner extends React.Component {
 
               <div className="banner_buttons">
                 <button className="banner_button">Play</button>
-                <button className="banner_button">Add to List</button>
+                <button className="banner_button" onClick={() => {this.props.createAddToList(this.state.shows.id, this.props.list.id)}}>Add to List</button>
               </div>
 
               <h1 className="banner_overview">
@@ -52,4 +54,4 @@ class Banner extends React.Component {
   }
 }
 
-export default Banner
+export default withRouter(Banner)

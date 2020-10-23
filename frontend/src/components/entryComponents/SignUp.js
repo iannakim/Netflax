@@ -35,11 +35,12 @@ class SignUp extends React.Component {
   })
       .then(res => res.json())
       .then((newUser)=> {
-        console.log(newUser)
           this.props.addUserToState(newUser)
+          this.props.createList(newUser)
           this.props.history.push("/home")
       })
   }
+
 
   render(){
     return(

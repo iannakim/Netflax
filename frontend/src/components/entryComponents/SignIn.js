@@ -29,10 +29,9 @@ class SignIn extends React.Component {
     })
       .then(res => res.json())
       .then((user)=> {
-        console.log("this is props", this.props);
-        console.log(user);
         if(user.id) {
           this.props.addUserToState(user)
+          this.props.findList(user)
           this.props.history.push("/home")
         }
         else {

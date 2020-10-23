@@ -2,6 +2,7 @@ import React from 'react'
 import Popup from "reactjs-popup";
 import Content from "./Content.js";
 import './StripContainer.css'
+import { withRouter } from 'react-router-dom';
 
 class StripContainer extends React.Component {
 
@@ -34,7 +35,7 @@ state = {
                 key={movie.id}
                 className={`strip_poster ${this.props.isLargeRow && "strip_posterLarge"}`} 
                 src={this.props.isLargeRow ? movie.show.poster : movie.show.backdrop} alt={movie.show.title} />}>
-              {close => <Content movie={movie} close={close} />}
+              {close => <Content movie={movie} close={close} createAddToList={this.props.createAddToList} list={this.props.list}/>}
               </Popup>
               
             ))}
@@ -46,4 +47,4 @@ state = {
   }
 }
 
-export default StripContainer
+export default withRouter(StripContainer)
