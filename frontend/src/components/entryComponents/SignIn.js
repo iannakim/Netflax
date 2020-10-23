@@ -1,5 +1,4 @@
 import React from 'react'
-import { Route, Switch, Redirect } from 'react-router-dom'
 import './Form.css'
 import { withRouter } from 'react-router-dom';
 
@@ -19,12 +18,6 @@ class SignIn extends React.Component {
 
   handleSubmit = (evt) => {
     evt.preventDefault()
-
-    // this.props.handleLogIn({
-    //   email: this.state.email,
-    //   password: this.state.password
-    // })
-    // evt.target.reset()
 
     fetch("http://localhost:3000/login", {
       method: "POST",

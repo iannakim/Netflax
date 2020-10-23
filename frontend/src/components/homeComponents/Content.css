@@ -1,0 +1,103 @@
+/* .modal {
+  font-size: 12px;
+} */
+.modal > .header {
+  width: 70%;
+  margin-left: 15%;
+  border-bottom: 1px solid gray;
+  font-size: 18px;
+  text-align: center;
+  padding: 5px;
+}
+.modal > .modal_content {
+  width: 70%;
+  margin-left: 15%;
+  height: 60vh;
+  background: rgb(28, 27, 27);
+  color: #fff;
+  padding: 20px 10px;
+  overflow-y: auto;
+  border-radius: 3rem;
+  opacity: 90%;
+
+}
+.modal > .actions {
+  margin: auto;
+}
+.modal > .actions {
+  width: 70%;
+  margin-left: 15%;
+  padding: 10px 5px;
+  text-align: center;
+}
+.modal > .close {
+  cursor: pointer;
+  position: absolute;
+  display: block;
+  padding: 2px 5px;
+  line-height: 16px;
+  right: 12%;
+  top: -2px;
+  font-size: 1rem;
+  font-weight: 600;
+  background: #d83939;
+  color: #000;
+  border-radius: 18px;
+}
+
+.poster {
+  height: 400px;
+  float: left;
+  border-radius: 2rem;
+  opacity: none;
+  padding: 0px 5px;
+}
+
+.header {
+  font-size: 2rem;
+  font-weight: 700;
+  padding-top: 30px;
+}
+
+.genre {
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding-top: 5px;
+}
+
+.overview {
+  font-size: 0.8rem;
+  font-family:'Ubuntu', 'Helvetica Neue', sans-serif;
+  padding-top: 35px;
+}
+
+.release {
+  font-size: 0.8rem;
+  font-weight: 400;
+  padding-top: 35px;
+}
+
+.button {
+  padding-top: 10px;
+}
+
+.modal_button {
+  cursor: pointer;
+  color: white;
+  outline: none;
+  border: none;
+  font-weight: 700;
+  border-radius: 0.2vw;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  margin-right:1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  background-color: rgba(51, 51, 51, 0.5);
+}
+
+.modal_button:hover {
+  color: black;
+  background-color: #e6e6e6;
+  transition: all 0.2s;
+}

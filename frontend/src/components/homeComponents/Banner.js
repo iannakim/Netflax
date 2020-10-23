@@ -37,7 +37,7 @@ class Banner extends React.Component {
 
               <div className="banner_buttons">
                 <button className="banner_button">Play</button>
-                <button className="banner_button">My List</button>
+                <button className="banner_button">Add to List</button>
               </div>
 
               <h1 className="banner_overview">
