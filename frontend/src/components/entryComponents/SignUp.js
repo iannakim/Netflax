@@ -1,6 +1,7 @@
 import React from 'react'
 import './Form.css'
-import { Route, Switch, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
+import { withRouter } from 'react-router-dom';
 
 class SignUp extends React.Component {
 
@@ -36,6 +37,7 @@ class SignUp extends React.Component {
       .then((newUser)=> {
         console.log(newUser)
           this.props.addUserToState(newUser)
+          this.props.history.push("/home")
       })
   }
 
@@ -44,7 +46,7 @@ class SignUp extends React.Component {
       <div className="form_background">
         <div className="form_page">
           <div className="sign_in">
-          <Link to="/login">
+          <Link to="/signin">
               <button className="sign_in_button">Sign In</button>
           </Link>
           </div>
@@ -92,4 +94,4 @@ class SignUp extends React.Component {
 }
 
 
-export default SignUp
+export default withRouter(SignUp)

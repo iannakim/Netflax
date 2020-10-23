@@ -1,6 +1,7 @@
 import React from 'react'
 import { Route, Switch, Redirect } from 'react-router-dom'
 import './Form.css'
+import { withRouter } from 'react-router-dom';
 
 class SignIn extends React.Component {
 
@@ -19,33 +20,33 @@ class SignIn extends React.Component {
   handleSubmit = (evt) => {
     evt.preventDefault()
 
-    this.props.handleLogIn({
-      email: this.state.email,
-      password: this.state.password
-    })
-    evt.target.reset()
-
-    // fetch("http://localhost:3000/login", {
-    //   method: "POST",
-    //   headers: {"content-type": "application/json" },
-    //   body: JSON.stringify({
-    //     email: this.state.email,
-    //     password: this.state.password
-    //   })
+    // this.props.handleLogIn({
+    //   email: this.state.email,
+    //   password: this.state.password
     // })
-    //   .then(res => res.json())
-    //   .then((user)=> {
-    //     console.log("this is props", this.props);
-    //     console.log(user);
-    //     if(user.id) {
-    //       this.props.addUserToState(user)
-    //       this.props.history.push("/home")
-    //     }
-    //     else {
-    //       alert("INVALID EMAIL OR PASSWORD. PLEASE TRY AGAIN.")
-    //   }
-    //   })
-    //   evt.target.reset()
+    // evt.target.reset()
+
+    fetch("http://localhost:3000/login", {
+      method: "POST",
+      headers: {"content-type": "application/json" },
+      body: JSON.stringify({
+        email: this.state.email,
+        password: this.state.password
+      })
+    })
+      .then(res => res.json())
+      .then((user)=> {
+        console.log("this is props", this.props);
+        console.log(user);
+        if(user.id) {
+          this.props.addUserToState(user)
+          this.props.history.push("/home")
+        }
+        else {
+          alert("INVALID EMAIL OR PASSWORD. PLEASE TRY AGAIN.")
+      }
+      })
+      evt.target.reset()
 }
 
   
@@ -81,4 +82,4 @@ class SignIn extends React.Component {
 }
 
 
-export default SignIn
+export default withRouter(SignIn)

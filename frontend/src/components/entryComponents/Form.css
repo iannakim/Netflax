@@ -100,3 +100,23 @@ input[type='submit']:hover {
   background-color: #292626;
   transition: all 0.2s;
 }
+
+.not_found {
+  position: relative;
+  padding-top: 100px;
+  padding-right: 10%;
+  padding-bottom: 50px;
+  padding-left: 10%;
+  margin-bottom: 0;
+  background: 0 0;
+  color: rgb(96, 95, 95);
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: left;
+  font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;
+}
+
+.error_image {
+  width: 50px;
+  object-fit: contain;
+}

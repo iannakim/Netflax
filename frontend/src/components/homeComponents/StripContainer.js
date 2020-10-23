@@ -1,5 +1,4 @@
 import React from 'react'
-import Show from './Show.js'
 import './StripContainer.css'
 import YouTube from 'react-youtube';
 import movieTrailer from 'movie-trailer'
