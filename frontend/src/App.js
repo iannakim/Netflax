@@ -152,9 +152,9 @@ class App extends React.Component {
 
               <Switch>
                 <Route path="/" exact render={ this.renderSignUp } />
-                <Route path="/signin" render={ this.renderSignIn } />
-                <Route path="/home" render={ this.renderHome } />
-                <Route path="/lists" render={ this.renderLists } />
+                <Route path="/signin" exact render={ this.renderSignIn } />
+                <Route path="/home" exact render={ this.renderHome } />
+                <Route path="/lists" exact render={ this.renderLists } />
                 <Route component={NotFound} />
               </Switch>
 
