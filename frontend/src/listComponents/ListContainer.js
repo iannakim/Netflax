@@ -1,5 +1,5 @@
 import React from 'react'
-import List from '../listComponents/List.js'
+import List from './List.js'
 import { withRouter } from 'react-router-dom';
 
 class ListContainer extends React.Component {

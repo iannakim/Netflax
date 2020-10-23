@@ -97,12 +97,7 @@ end
 
 
 # User
-anna = User.create!(first_name: "Anna", last_name: "Kim", email: "anna@gmail.com", password:"abc123")
-
-
-# # List
-# favorite = List.create!(name: "Favorites", user_id: 1)
-# watched = List.create!(name: "Watched List", user_id: 1)
+# anna = User.create!(first_name: "Anna", last_name: "Kim", email: "anna@gmail.com", password:"abc123")
 
 
 # # addToList

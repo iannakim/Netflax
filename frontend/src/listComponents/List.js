@@ -1,7 +1,6 @@
 import React from 'react'
 import './List.css';
 import { withRouter } from 'react-router-dom';
-
 class List extends React.Component {
 
   state = {
@@ -32,14 +31,21 @@ class List extends React.Component {
   render() {
     return(
       <div className="my_show_list">
-          <h2>{this.props.name}</h2>
+          <h1>{this.props.name}</h1>
 
           <div className="list_shows">
             {this.state.allItems.map((listItem) => (
               <>
-                <div className="show_item">{listItem.show.title}</div>
+                <div className="item_title">
+                  {listItem.show.title}
+                </div>
+
+                <div className="item_poster">
+                  <img className="poster" src={listItem.show.poster} alt={listItem.show.title}/>
+                </div>
+
                 <div className="delete_item">
-                  <button className="banner_button" onClick={() => {this.deleteFromList(listItem.id)}}>Remove</button>
+                  <button className="item_button" onClick={() => {this.deleteFromList(listItem.id)}}>Remove</button>
                 </div>
               </>
             ))}

@@ -5,7 +5,8 @@ import NotFound from './NotFound.js'
 import SignUp from './components/entryComponents/SignUp.js';
 import SignIn from './components/entryComponents/SignIn.js';
 import HomeContainer from './components/homeComponents/HomeContainer.js';
-import ListContainer from './components/listComponents/ListContainer.js'
+import ListContainer from './listComponents/ListContainer.js'
+
 import { Route, Switch } from 'react-router'
 
 class App extends React.Component {
@@ -134,9 +135,12 @@ class App extends React.Component {
   })
      .then(res => res.json())
      .then((newlyAddedListItem) => {
-          console.log(newlyAddedListItem)
       })
   }
+
+
+
+
 
 
   render() {

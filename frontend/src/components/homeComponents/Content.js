@@ -10,7 +10,7 @@ function Content(props) {
 
         <div className="modal_content">
           <div className="poster">
-              <img className="poster" src={props.movie.show.poster} />
+              <img className="poster" src={props.movie.show.poster} alt={props.movie.show.title}/>
           </div>
 
           <div className="content">
