@@ -1,21 +1,10 @@
 import React from 'react'
 import './StripContainer.css'
-import YouTube from 'react-youtube';
-import movieTrailer from 'movie-trailer'
 
 class StripContainer extends React.Component {
 
 state = {
   shows: [],
-  opts: {
-    height: "390",
-    width: "100%",
-    playerVars: {
-      // "https://developers/google/com.youtube/player_parameters"
-      autoplay: 1,
-    }
-  },
-  trailerUrl: "", 
 }
 
 
@@ -30,21 +19,6 @@ state = {
       })
   }
 
-  // handleClick = (movie) => {
-  //   if (trailerUrl) {
-  //   setTrailerUrl('');
-  //   } else {
-  //     movieTrailer(movie?.title || "")
-  //     .then(url => {
-  //       // https://www.youtube.com/watch?v=KK8FHdFluOQ
-  //       const urlParams = new URLSearchParams(new URL(url).search);
-  //       setTrailerUrl(urlParams.get("v"));
-
-
-  //     })
-  //     .catch((error) => console.log(error))
-  //   }
-  // }
 
 
   render(){
@@ -57,13 +31,32 @@ state = {
             {this.state.shows.map((movie) => (
               <img 
               key={movie.id}
-              // onClick={()=>this.handleClick(movie)}
+              data-toggle="modal"
+              data-target="#staticBackdrop"
               className={`strip_poster ${this.props.isLargeRow && "strip_posterLarge"}`} 
               src={this.props.isLargeRow ? movie.show.poster : movie.show.backdrop} alt={movie.show.title} />
             ))}
           </div>
-
-          {this.state.trailerUrl && <YouTube videoId={this.state.trailerUrl} opts={this.state.opts} />}
+            
+            <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    ...
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Understood</button>
+                  </div>
+                </div>
+              </div>
+            </div>
 
       </div>
     )
