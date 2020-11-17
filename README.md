@@ -1,7 +1,7 @@
 # Netflax
 *Live Demo Coming Soon!*
 
-Netflax is a Movie/TV database appliation where users can browse through different shows based on genre. Netflax was inspired by the popular streaming service, Netflix.
+Netflax is a Movie/TV Show Searching App where users can browse through different shows based on different genres. Netflax was inspired by the popular streaming service, Netflix.
 
 ## Features
 
