@@ -27,9 +27,9 @@ Users can:
 ## Screenshots
 <img src='frontend/image/screenshot.png'> </img>
  
- ## Set-up for running the app
+ ## Set Up
  
- * Clone this repo into your local computer
+ * Clone this repo into your local computer using the ssh key
  * CD into the repo 'Netflax'
  
  Backend Set-Up:
