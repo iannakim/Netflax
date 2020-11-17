@@ -26,28 +26,6 @@ Users can:
 
 ## Screenshots
 <img src='frontend/image/screenshot.png'> </img>
-
-
-## Tech Stack
- * Ruby on Rails
- * Rails as an API
- * PostgreSQL
- * HTML/CSS
- * Active Record
- * Custom CSS
- 
-## Gems 
- * rack-cors
- * active_model_serializers
- * Rest-Client API
- 
-## Build Status
- This project is complete.
- 
-## Future Features
- * re-format My List layout (CSS)
- * Create user account page
- * Implement show trailer
  
  ## Set-up for running the app
  
@@ -66,6 +44,26 @@ Users can:
  * Run 'npm install' to install all dependencies
  * Run 'npm start' and confirm 'Yes' which will open your web browser and start the application!
  
+ ## Build Status
+ This project is complete.
+ 
+## Future Features
+ * re-format My List layout (CSS)
+ * Create user account page
+ * Implement show trailer
+ 
+## Tech Stack
+ * Ruby on Rails
+ * Rails as an API
+ * PostgreSQL
+ * HTML/CSS
+ * Active Record
+ * Custom CSS
+ 
+## Gems 
+ * rack-cors
+ * active_model_serializers
+ * Rest-Client API
  
 ## Creator
  * [Anna Kim](https://github.com/iannakim)
