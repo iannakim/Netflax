@@ -67,5 +67,5 @@ Users can:
  * Rest-Client API
  
 ## Creator
- * [Anna Kim](https://github.com/iannakim)
+ * [Anna Kim](https://github.com/iannakim) <a href = "https://www.linkedin.com/in/devannakim/"> Let's Connect</a>!  👋🏻
  
