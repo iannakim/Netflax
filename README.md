@@ -3,7 +3,7 @@
 
 Netflax is a Movie/TV Show Searching App where users can browse through thounsands of shows based on genres. Netflax uses the MovieDB api to get the latest movies and shows available for streaming. Netflax was inspired by the popular streaming service, Netflix.
 
-## Take a Look! 📷
+## Sample Images 📷
 <img src='frontend/image/screenshot.png'> </img>
  
  ## Set Up
@@ -46,7 +46,7 @@ Users can:
 <img src='frontend/image/domainmodel.png'> </img>
 
  ## Build Status
- This project is complete.
+ * This project was completed in 5 days for the purpose of the project presentation.
  
 ## Future Features
  * re-format My List layout (CSS)
