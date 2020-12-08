@@ -1,5 +1,5 @@
 # Netflax
-*Live Demo Coming Soon!*
+Check out the <a href="https://youtu.be/hAE1uylB2h4">demo here</a> 🎬
 
 Netflax is a Movie/TV Show Searching App where users can browse through thounsands of shows based on genres. Netflax uses the MovieDB api to get the latest movies and shows available for streaming. Netflax was inspired by the popular streaming service, Netflix.
 
