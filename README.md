@@ -53,19 +53,6 @@ Users can:
  * Create user account page
  * Implement show trailer
  
-## Tech Stack
- * Ruby on Rails
- * Rails as an API
- * PostgreSQL
- * HTML/CSS
- * Active Record
- * Custom CSS
- 
-## Gems 
- * rack-cors
- * active_model_serializers
- * Rest-Client API
- 
 ## Creator
  * [Anna Kim](https://github.com/iannakim) <a href = "https://www.linkedin.com/in/devannakim/"> Let's Connect</a>!  👋🏻
  
