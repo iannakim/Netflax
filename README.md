@@ -6,6 +6,20 @@ Netflax is a Movie/TV Show Searching App where users can browse through thounsan
 ## Sample Images 📷
 <img src='frontend/image/screenshot.png'> </img>
  
+ ## Tech Stack
+ * React JS
+ * Ruby on Rails
+ * Rails as an API
+ * PostgreSQL
+ * HTML/CSS
+ * Active Record
+ * Custom CSS
+ 
+## Gems 
+ * rack-cors
+ * active_model_serializers
+ * Rest-Client API
+ 
  ## Set Up
  
  * Clone this repo into your local computer using the ssh key
