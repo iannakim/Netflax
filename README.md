@@ -1,7 +1,42 @@
 # Netflax
-*Live Demo Coming Soon!*
+Check out the <a href="https://youtu.be/hAE1uylB2h4">demo here</a> 🎬
 
 Netflax is a Movie/TV Show Searching App where users can browse through thounsands of shows based on genres. Netflax uses the MovieDB api to get the latest movies and shows available for streaming. Netflax was inspired by the popular streaming service, Netflix.
+
+## Sample Images 📷
+<img src='frontend/image/screenshot.png'> </img>
+ 
+ ## Tech Stack
+ * React JS
+ * Ruby on Rails
+ * Rails as an API
+ * PostgreSQL
+ * HTML/CSS
+ * Active Record
+ * Custom CSS
+ 
+## Gems 
+ * rack-cors
+ * active_model_serializers
+ * Rest-Client API
+ 
+ ## Set Up
+ 
+ * Clone this repo into your local computer using the ssh key
+ * CD into the repo 'Netflax'
+ 
+ Backend Set-Up:
+ * CD once more into 'backend' folder.
+ * Run 'bundle install' to install all dependencies
+ * Run 'rails db:create' to create the tables for the datables
+ * Run 'rails db:migrate' and "rails db:seed' to save the seed data.
+ * Run 'rails s' to start the server
+ 
+ Frontend Set-Up:
+ * Open another terminal and CD into the 'frontend' folder
+ * Run 'npm install' to install all dependencies
+ * Run 'npm start' and confirm 'Yes' which will open your web browser and start the application!
+ 
 
 ## Features
 
@@ -24,47 +59,14 @@ Users can:
 ## Domain Model
 <img src='frontend/image/domainmodel.png'> </img>
 
-## Screenshots
-<img src='frontend/image/screenshot.png'> </img>
- 
- ## Set Up
- 
- * Clone this repo into your local computer using the ssh key
- * CD into the repo 'Netflax'
- 
- Backend Set-Up:
- * CD once more into 'backend' folder.
- * Run 'bundle install' to install all dependencies
- * Run 'rails db:create' to create the tables for the datables
- * Run 'rails db:migrate' and "rails db:seed' to save the seed data.
- * Run 'rails s' to start the server
- 
- Frontend Set-Up:
- * Open another terminal and CD into the 'frontend' folder
- * Run 'npm install' to install all dependencies
- * Run 'npm start' and confirm 'Yes' which will open your web browser and start the application!
- 
  ## Build Status
- This project is complete.
+ * This project was completed in 5 days for the purpose of the project presentation.
  
 ## Future Features
  * re-format My List layout (CSS)
  * Create user account page
  * Implement show trailer
  
-## Tech Stack
- * Ruby on Rails
- * Rails as an API
- * PostgreSQL
- * HTML/CSS
- * Active Record
- * Custom CSS
- 
-## Gems 
- * rack-cors
- * active_model_serializers
- * Rest-Client API
- 
 ## Creator
- * [Anna Kim](https://github.com/iannakim)
+ * [Anna Kim](https://github.com/iannakim) <a href = "https://www.linkedin.com/in/devannakim/"> Let's Connect</a>!  👋🏻
  
